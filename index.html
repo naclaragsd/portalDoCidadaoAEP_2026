@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Cidadão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- janela que aparece ao clicar em "ver detalhes" -->
+    <div id="modal" class="modal-overlay"> <!--fundo escurecido que cobre a página toda quando o modal abre -->
+        <div class="modal-caixa"><!--janelinha branca, onde ficam as informações.-->
+            <button id="modal-fechar" class="modal-fechar">✕</button>
+            <span id="modal-status" class="modal-status"></span>
+            <h2 id="modal-titulo"></h2>
+            <p id="modal-descricao" class="modal-descricao"></p>
+            <p id="modal-detalhes" class="modal-detalhes"></p>
+            <span id="modal-opinioes" class="modal-opinioes"></span>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <header>
+            <h1>Portal do Cidadão: Câmara Municipal</h1>
+            <h2>Iniciativa alinhada à ODS 11 - Cidades Sustentáveis e Inclusivas</h2>
+            <span class="ods-badge">ODS 11 — Cidades Sustentáveis e Inclusivas</span>
+        </header>
+
+        <main>
+            <div class="cidade-bar">
+                <label for="cidade">Cidade:</label>
+                <select id="cidade">
+                    <option>Cianorte</option>
+                    <option>Maringá</option>
+                    <option>Curitiba</option>
+                </select>
+            </div>
+
+            <section class="propostas">
+                <h2>Propostas Legislativas</h2>
+                <div class="cards" id="cards"></div>
+            </section>
+
+            <section class="opiniao">
+
+                <div class="formulario">
+                    <h2>Envie sua opinião</h2>
+                    <p>Compartilhe sugestões e opiniões sobre os projetos legislativos em tramitação.</p>
+
+                    <form id="formOpiniao">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" placeholder="Seu nome completo">
+
+                        <label for="idade">Idade</label>
+                        <input type="number" id="idade" placeholder="Mínimo 16 anos">
+
+                        <label for="projeto">Projeto legislativo</label>
+                        <select id="projeto"></select>
+
+                        <label>Avaliação</label>
+                        <div class="estrelas-input">
+                            <button type="button" class="estrela-btn" data-valor="1">☆</button>
+                            <button type="button" class="estrela-btn" data-valor="2">☆</button>
+                            <button type="button" class="estrela-btn" data-valor="3">☆</button>
+                            <button type="button" class="estrela-btn" data-valor="4">☆</button>
+                            <button type="button" class="estrela-btn" data-valor="5">☆</button>
+                            <input type="hidden" id="nota" value="3">
+                        </div>
+
+                        <label for="opiniaoTexto">Sua opinião</label>
+                        <textarea id="opiniaoTexto" placeholder="Escreva aqui sua opinião ou sugestão..."></textarea>
+
+                        <button type="submit">Enviar opinião</button>
+                    </form>
+                </div>
+
+                <div class="area-comentarios">
+                    <h2 class="titulo-comentarios">Opiniões da população</h2>
+
+                    <div class="filtros">
+                        <div>
+                            <label for="filtroProjeto">Filtrar por projeto</label>
+                            <select id="filtroProjeto">
+                                <option value="todos">Todos</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="ordenacao">Ordenar por</label>
+                            <select id="ordenacao">
+                                <option value="recentes">Mais recentes</option>
+                                <option value="curtidas">Mais curtidos</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="comentarios">
+                        <div class="empty-state">Nenhuma opinião ainda. Seja o primeiro!</div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <footer></footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
