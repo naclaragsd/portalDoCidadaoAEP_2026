@@ -62,7 +62,7 @@ A plataforma incentiva a participação ativa da população no processo legisla
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/portal-cidadao.git
+https://naclaragsd.github.io/portalDoCidadaoAEP_2026/
 ```
 
 2. Abra o arquivo `aep.html` no navegador.
