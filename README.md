@@ -1,61 +1,45 @@
-# 🏛️ Portal do Cidadão — Câmara Municipal
-
-Aplicação web desenvolvida como trabalho da AEP do curso de Engenharia de Software — UniCesumar.
-
-O projeto está alinhado à **ODS 11 da ONU — Cidades Sustentáveis e Inclusivas**, e tem como objetivo aproximar a população das decisões legislativas do município por meio da tecnologia.
-
----
+# O projeto está alinhado ao ODS 11 da ONU — Cidades e Comunidades Sustentáveis, e tem como objetivo aproximar a população das decisões legislativas do município por meio da tecnologia.
 
 ## 💡 Sobre o projeto
 
-O Portal do Cidadão permite que moradores acompanhem as propostas legislativas em tramitação na Câmara dos Vereadores de sua cidade, e expressem suas opiniões e sugestões de forma simples e direta.
+O Portal do Cidadão permite que os moradores acompanhem as propostas legislativas em tramitação na Câmara dos Vereadores de sua cidade e registrem opiniões e sugestões de forma simples e direta.
 
-A plataforma incentiva a participação ativa da população no processo legislativo, promovendo transparência e inclusão política.
-
----
+A plataforma centraliza as informações sobre as propostas, apresenta esses dados de maneira mais acessível e cria um espaço para a manifestação da população.
 
 ## ✨ Funcionalidades
 
-- 📋 Visualização de propostas legislativas por cidade
-- 🗳️ Envio de opiniões e sugestões com avaliação por estrelas (1 a 5)
-- 💬 Exibição de comentários da população
-- ♥️ Curtidas nos comentários
-- 🔍 Filtro de comentários por projeto legislativoo
-```
+- Cadastro de cidadãos (idade mínima de 16 anos)
+- Consulta às propostas legislativas em tramitação
+- Visualização dos detalhes de uma proposta, com os comentários já registrados
+- Registro de comentários e opiniões sobre as propostas
+- Envio de sugestões relacionadas às propostas
 
 ---
 
 ## 🧠 Conceitos aplicados
 
 **Orientação a Objetos**
-- Classe `Proposta` — representa cada projeto legislativo com título, descrição, status, detalhes e curtidas
-- Classe `Comentario` — representa cada opinião enviada com nome, idade, projeto, cidade, nota, curtidas e timestamp
-
-**Estruturas de dados**
-- **Lista** — `listaComentarios[]` armazena todos os comentários enviados, com uso de `push`, `filter` e `forEach`
-- **Pilha (LIFO)** — utilizada na ordenação por "mais recentes", onde o último comentário adicionado é o primeiro a ser exibido
+- `Usuario` — reúne dados como nome, idade e e-mail, com funcionalidades como login e envio de opiniões e sugestões
+- `Vereador` — herda de `Usuario` e adiciona o partido e a visualização de sugestões
+- `Proposta` — representa cada projeto de lei, com título, descrição e data de criação
+- `Interacao` — classe base para `Avaliacao` e `Comentario`, associada à `Proposta` em relação 1:N
+- **Herança** — `Vereador` herda de `Usuario`; `Avaliacao` e `Comentario` herdam de `Interacao`
+- **Polimorfismo** — o método `exibirInteracao()` tem comportamento diferente conforme o tipo de interação
 
 ---
 
 ## 🛠️ Tecnologias utilizadas
 
-- Java 
-- JavaScript
+- Java
+- MySQL
 
 ---
 
-## 🚀 Como executar
+## 📁 Estrutura do repositório
 
-1. Clone o repositório:
-```bash
-https://naclaragsd.github.io/portalDoCidadaoAEP_2026/
-```
-
-2. Abra o arquivo `aep.html` no navegador.
-
-Não é necessário instalar nada — o projeto roda direto no browser.
-
----
+- `/src` — código-fonte da aplicação
+- `/docs` — documentação do projeto e diagramas
+- `/database` — scripts de criação e estruturação do banco de dados MySQL
 
 ## 📚 Referências
 
