@@ -20,20 +20,7 @@ A plataforma incentiva a participação ativa da população no processo legisla
 - 🗳️ Envio de opiniões e sugestões com avaliação por estrelas (1 a 5)
 - 💬 Exibição de comentários da população
 - ♥️ Curtidas nos comentários
-- 🔍 Filtro de comentários por projeto legislativo
-- 🔃 Ordenação por mais recentes ou mais curtidos
-- 🪟 Modal com detalhes completos de cada proposta
-- ✅ Validação de idade mínima de 16 anos para participação
-
----
-
-## 🏗️ Estrutura do projeto
-
-```
-📁 portal-cidadao/
-├── aep.html       # Estrutura da página
-├── aep.css        # Estilização e layout
-└── aep.js         # Lógica e funcionalidades
+- 🔍 Filtro de comentários por projeto legislativoo
 ```
 
 ---
@@ -52,8 +39,7 @@ A plataforma incentiva a participação ativa da população no processo legisla
 
 ## 🛠️ Tecnologias utilizadas
 
-- HTML5
-- CSS3
+- Java 
 - JavaScript
 
 ---
