@@ -46,6 +46,7 @@ CREATE TABLE IF NOT EXISTS proposta (
     titulo           VARCHAR(150) NOT NULL,
     descricao        TEXT         NOT NULL,
     data_publicacao  DATE         NOT NULL,
+    situacao         VARCHAR(20)  NOT NULL DEFAULT 'EM_ANALISE',
     vereador_id      INT          NOT NULL,
     CONSTRAINT pk_proposta PRIMARY KEY (proposta_id),
     CONSTRAINT fk_proposta_vereador FOREIGN KEY (vereador_id)
