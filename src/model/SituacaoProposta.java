@@ -3,10 +3,7 @@ package br.com.portalcidadao.model;
 /**
  * Andamento da tramitação de uma proposta (RF08).
  *
- * [CONCEITO] enum: usado quando existe uma lista FIXA de valores possíveis.
- * Com uma String comum alguém poderia gravar "aprovado", "Aprovada", "APROVADO"...
- * Com o enum, o compilador só aceita um destes três valores.
- * No banco, a mesma garantia é feita pela CHECK ck_proposta_situacao.
+ *
  */
 public enum SituacaoProposta {
 
