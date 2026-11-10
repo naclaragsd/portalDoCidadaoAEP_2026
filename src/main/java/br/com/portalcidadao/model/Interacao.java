@@ -6,13 +6,7 @@ import java.time.format.DateTimeFormatter;
 /**
  * Participação de um usuário em uma proposta. É a classe base de Comentario e Avaliacao.
  *
- * [CONCEITO] Classe abstrata ("abstract"): representa uma ideia geral que não existe sozinha.
- * Não dá para fazer "new Interacao(...)": toda interação concreta é um Comentario OU uma Avaliacao.
- * Ela serve para reunir o que as duas têm em comum (quem fez, em qual proposta, quando)
- * e não repetir esse código nas duas classes filhas.
- *
- * [CONCEITO] Abstração: o resto do sistema pode trabalhar com "Interacao" sem se preocupar
- * com o tipo exato (veja o método imprimirDetalhes() no Menu).
+ * 
  */
 public abstract class Interacao {
 
@@ -35,9 +29,7 @@ public abstract class Interacao {
     /**
      * Texto mostrado na tela de detalhes da proposta.
      *
-     * [CONCEITO] Método abstrato: só tem a assinatura, sem corpo. Ele OBRIGA cada classe filha
-     * a escrever a sua própria versão. Esse é o polimorfismo descrito no trabalho:
-     * o mesmo método exibirInteracao() se comporta de um jeito em Comentario e de outro em Avaliacao.
+     * 
      */
     public abstract String exibirInteracao();
 
