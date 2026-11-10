@@ -4,18 +4,14 @@ package br.com.portalcidadao.model;
  * Usuário da plataforma. Por padrão representa um cidadão;
  * a classe Vereador herda daqui e muda só o que é diferente.
  *
- * As classes do pacote model representam os "objetos do mundo real" do sistema.
- * Elas não sabem nada de banco de dados nem de terminal: só guardam dados e comportamentos.
+ *.
  */
 public class Usuario {
 
-    // [CONCEITO] Constante: static final + nome em MAIÚSCULAS. Ter a regra em um lugar só
-    // evita o "número mágico" 16 espalhado pelo código.
+    
     public static final int IDADE_MINIMA = 16;
 
-    // [CONCEITO] Encapsulamento: os atributos são private, ou seja, nenhuma outra classe
-    // mexe neles diretamente. O acesso é feito pelos métodos get (e set, quando faz sentido).
-    // Repare que não existe setNome() nem setCpf(): depois de criado, o usuário não muda esses dados.
+    
     private int id;
     private String nome;
     private String cpf;
@@ -23,7 +19,7 @@ public class Usuario {
     private String cidade;
 
     public Usuario(int id, String nome, String cpf, int idade, String cidade) {
-        // "this.nome" é o atributo do objeto; "nome" sozinho é o parâmetro recebido
+        
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
@@ -41,9 +37,7 @@ public class Usuario {
     }
 
     // Os três métodos abaixo são sobrescritos na classe Vereador.
-    // [CONCEITO] Polimorfismo: quem chama usuario.isVereador() não precisa saber se o objeto
-    // é Usuario ou Vereador; o Java executa automaticamente a versão da classe real do objeto.
-
+    
     /** Valor gravado na coluna tipo_usuario do banco. */
     public String getTipo() {
         return "CIDADAO";
