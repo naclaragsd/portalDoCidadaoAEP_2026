@@ -26,8 +26,7 @@ import br.com.portalcidadao.view.Menu;
  */
 public class Main {
 
-    // [CONCEITO] Método main: é o método que a JVM procura para iniciar o programa.
-    // Precisa ser "public static void main(String[] args)".
+   
     public static void main(String[] args) {
 
         new Menu().iniciar();
