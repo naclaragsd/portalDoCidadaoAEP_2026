@@ -18,9 +18,7 @@ public class Proposta {
     private int votosFavoraveis;            // RF09: resultado da votação
     private int votosContrarios;
 
-    // [CONCEITO] Associação: a proposta guarda o OBJETO Vereador inteiro, e não só o id dele.
-    // No banco a relação é feita pela chave estrangeira vereador_id; no Java, por esta referência.
-    // É a linha entre Vereador e Proposta no diagrama de classes.
+   
     private Vereador vereador;
 
     // Estes dois não são colunas da tabela proposta: são calculados a partir da tabela
@@ -67,8 +65,6 @@ public class Proposta {
         return sb.toString();
     }
 
-    // [CONCEITO] Métodos private: são detalhes internos da classe, usados só pelos métodos
-    // acima. Quem está fora só enxerga linhaListagem() e detalhes(). Isso também é encapsulamento.
 
     private String textoVotacao() {
         if (situacao == SituacaoProposta.EM_ANALISE) {
@@ -81,7 +77,7 @@ public class Proposta {
         if (totalAvaliacoes == 0) {
             return "sem avaliações";
         }
-        // %.1f = número com uma casa decimal
+       
         return String.format("%.1f de 5 estrelas (%d %s)", mediaEstrelas, totalAvaliacoes,
                 totalAvaliacoes == 1 ? "avaliação" : "avaliações");
     }
