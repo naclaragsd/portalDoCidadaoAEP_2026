@@ -23,8 +23,7 @@ public class Avaliacao extends Interacao {
         this(0, usuario, propostaId, LocalDateTime.now(), estrela);
     }
 
-    // [CONCEITO] Polimorfismo: a versão do exibirInteracao() para AVALIAÇÕES mostra
-    // estrelas em vez de texto. Quem chama não precisa saber qual das duas está chamando.
+    
     @Override
     public String exibirInteracao() {
         // "*".repeat(3) gera "***"
