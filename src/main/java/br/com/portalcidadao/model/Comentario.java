@@ -5,17 +5,16 @@ import java.time.LocalDateTime;
 /**
  * Comentário (opinião) de um usuário sobre uma proposta (RF02).
  *
- * [CONCEITO] Herança de classe abstrata: Comentario herda de Interacao o usuário, a proposta
- * e a data, acrescenta o texto e as curtidas, e é OBRIGADO a implementar exibirInteracao().
+ * 
  */
 public class Comentario extends Interacao {
 
-    public static final int TAMANHO_MAXIMO = 500; // mesmo limite da coluna VARCHAR(500) no banco
+    public static final int TAMANHO_MAXIMO = 500; /
 
     private String texto;
     private int curtidas;
 
-    /** Construtor usado pelo DAO, com todos os dados que vieram do banco. */
+   
     public Comentario(int id, Usuario usuario, int propostaId, LocalDateTime dataRegistro,
                       String texto, int curtidas) {
         super(id, usuario, propostaId, dataRegistro);
@@ -28,8 +27,7 @@ public class Comentario extends Interacao {
         this(0, usuario, propostaId, LocalDateTime.now(), texto, 0);
     }
 
-    // [CONCEITO] Polimorfismo: esta é a versão do exibirInteracao() para COMENTÁRIOS.
-    // Compare com a versão de Avaliacao: mesmo método, resultado diferente.
+   
     @Override
     public String exibirInteracao() {
         // getId(), getUsuario()... são herdados de Interacao
