@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
  */
 public class Comentario extends Interacao {
 
-    public static final int TAMANHO_MAXIMO = 500; /
+    public static final int TAMANHO_MAXIMO = 500; 
 
     private String texto;
     private int curtidas;
