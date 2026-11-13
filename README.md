@@ -41,6 +41,28 @@ A plataforma centraliza as informações sobre as propostas, apresenta esses dad
 - `/docs` — documentação do projeto e diagramas
 - `/database` — scripts de criação e estruturação do banco de dados MySQL
 
+Organização do código (`src/main/java/br/com/portalcidadao`):
+
+- `model` — classes do domínio (`Usuario`, `Vereador`, `Proposta`, `Interacao`, `Comentario`, `Avaliacao`)
+- `dao` — acesso ao banco com JDBC (`Conexao` e um DAO por tabela)
+- `service` — regras de negócio (idade mínima, só o autor edita, nota de 1 a 5 etc.)
+- `view` — menu de terminal
+
+---
+
+## ▶️ Como executar
+
+1. Tenha o **Java 17+** e o **MySQL 8** instalados.
+2. Rode o script `database/portal_cidadao.sql` no MySQL (pelo Workbench, por exemplo).
+3. Ajuste usuário e senha do banco em `src/main/resources/db.properties`.
+4. Na pasta do projeto, execute:
+   - Windows: `mvnw.cmd compile exec:java`
+   - Linux/Mac/Git Bash: `./mvnw compile exec:java`
+
+   Ou abra o projeto na IDE (IntelliJ, Eclipse, NetBeans) e rode a classe `Main`.
+
+Usuários de teste (entre pelo CPF): vereadores `111.111.111-11` e `222.222.222-22`; cidadãos `333.333.333-33` e `444.444.444-44`.
+
 ## 📚 Referências
 
 - ONU. **Objetivo de Desenvolvimento Sustentável 11 — Cidades e Comunidades Sustentáveis**. Disponível em: https://brasil.un.org/pt-br/sdgs/11
